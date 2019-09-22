@@ -1,13 +1,13 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import * as theme from './theme/theme';
-import Layout from './modules/Layout/Layout';
-
+import Subvention from './pages/Subvention.page';
+import './assets/css/normalize.css';
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Layout />
+      <Subvention />
     </ThemeProvider>
   );
 }

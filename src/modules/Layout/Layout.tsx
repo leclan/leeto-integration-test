@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, remCalc } from '../../theme/theme';
+import { colors, remCalc, Spaces } from '../../theme/theme';
+import Container from '../../components/Container/Container';
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
@@ -21,14 +22,24 @@ const HeaderItem = styled(Header)`
 
 const Content = styled.div`
   grid-area: Content;
+  padding-top: ${Spaces.large};
+  padding-bottom: ${Spaces.large};
   background-color: ${colors.gray100};
 `
 
-const Layout = () => (
+type LayoutProps = {
+  children?: React.ReactNode
+};
+
+const Layout = ({ children }: LayoutProps) => (
   <LayoutGrid>
     <HeaderItem />
     <SidebarItem />
-    <Content>Hello</Content>
+    <Content>
+      <Container>
+        {children}
+      </Container>
+    </Content>
   </LayoutGrid>
 );
 
