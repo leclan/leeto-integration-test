@@ -19,8 +19,11 @@ const BreadcrumbItem = styled.a`
 
 const BreadcrumbItemIcon = styled(Icon)`
   margin-right: ${Spaces.small};
-  vertical-align: middle;
   font-size: ${remCalc(18)};
+  
+  &.anticon {
+    vertical-align: middle;
+  }
 `
 
 

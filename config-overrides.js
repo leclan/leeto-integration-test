@@ -15,7 +15,8 @@ module.exports = override(
     modifyVars: {
       '@primary-color': '#079CEE',
       '@btn-shadow': '0px 1px 4px rgba(0, 58, 140, 0.2)',
-      '@btn-primary-shadow': '0px 1px 4px rgba(0, 58, 140, 0.2)'
+      '@btn-primary-shadow': '0px 1px 4px rgba(0, 58, 140, 0.2)',
+      '@card-radius': '12px'
     },
   }),
 );
