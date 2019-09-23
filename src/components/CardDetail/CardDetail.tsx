@@ -14,6 +14,14 @@ const ColumnRight = styled.div`
   width: auto;
 `
 
+const CardStyled = styled(Card)`
+  .ant-card-body {
+    padding-right: ${remCalc(14)};
+    padding-left: ${remCalc(14)};
+  }
+  
+`
+
 const IconWrapper = styled.div<StyledIconProps>`
   flex: 0 0 auto;
   width: ${remCalc(36)};
@@ -42,7 +50,7 @@ type CardDetailProps = {
 };
 
 const CardDetail = ({ className, data, legend, icon, colorIcon }: CardDetailProps) => (
-  <Card className={className}>
+  <CardStyled className={className}>
     <Row type="flex">
       <IconWrapper colorIcon={colorIcon}>
         <Icon type={icon} />
@@ -54,7 +62,7 @@ const CardDetail = ({ className, data, legend, icon, colorIcon }: CardDetailProp
         <span>{legend}</span>
       </ColumnRight>
     </Row>
-  </Card>
+  </CardStyled>
 )
 
 export default CardDetail;
