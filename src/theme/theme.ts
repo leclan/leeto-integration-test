@@ -17,17 +17,19 @@ export const colors = {
 
 export const globalStyle = {
   radius: '12px',
-  width: `${remCalc(984)}`,
+  radiusSmall: '4px',
+  width: `${remCalc(1032)}`,
   gutterSmall: `${remCalc(14)}`,
   gutterMedium: `${remCalc(24)}`,
   shadow: '0px 2px 4px rgba(0, 0, 0, .03)',
 };
 
 export const Spaces = {
-  default: '12px',
-  small: '8px',
-  medium: '24px',
-  large: '34px'
+  default: `${remCalc(12)}`,
+  tiny: `${remCalc(6)}`,
+  small: `${remCalc(8)}`,
+  medium: `${remCalc(22)}`,
+  large: `${remCalc(42)}`
 };
 
 export const transition = {
