@@ -40,20 +40,20 @@ export const transition = {
 };
 
 export const breakpoints = {
-  small: ' 0px',
-  medium: '768px',
-  large: '1024px',
-  xlarge: '1200px',
-  xxlarge: '1500px',
+  small: 0,
+  medium: 768,
+  large: 1024,
+  xlarge: 1200,
+  xxlarge: 1500
 };
 
 export const mediaQueries = {
-  smallOnly: `@media only screen and (max-width : ${breakpoints.medium})`,
+  smallOnly: `@media only screen and (max-width : calc(${breakpoints.medium}px - 1px))`,
   medium: `@media only screen and (min-width: ${breakpoints.medium})`,
   mediumOnly: `@media only screen and (max-width : ${breakpoints.large}) and (min-width:${breakpoints.medium})`,
-  mediumDown: `@media only screen and (max-width : ${breakpoints.large})`,
+  mediumDown: `@media only screen and (max-width : calc(${breakpoints.large}px - 1px))`,
   large: `@media only screen and (min-width: ${breakpoints.large})`,
-  largeDown: `@media only screen and (max-width : ${breakpoints.xlarge})`,
+  largeDown: `@media only screen and (max-width : calc(${breakpoints.xlarge}px - 1px))`,
   xlarge: `@media only screen and (min-width: ${breakpoints.xlarge})`,
   xlargeDown: `@media only screen and (max-width : ${breakpoints.xxlarge})`,
   xlargeOnly: `@media only screen and (max-width : ${breakpoints.xxlarge}) and (min-width:${breakpoints.xlarge})`,
