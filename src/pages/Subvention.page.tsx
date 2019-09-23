@@ -12,8 +12,8 @@ import subventionSportPicture from '../assets/images/subvention.jpg';
 
 const Subvention = () => (
   <Layout>
-    <Breadcrumb></Breadcrumb>
-    <SubventionHead />
+    <Breadcrumb />
+    <SubventionHead title="Subvention sport" />
     <CardSubvention 
       img={subventionSportPicture}
       desc="Remboursement des activités sportives des salariés à hauteur de 150€ sur présentation de factures nominatives de licence sportive, d’adhésion à un club de sport ou d'achat de billetterie pour des événements sportifs."
@@ -25,7 +25,7 @@ const Subvention = () => (
       <CardDetail icon="team" colorIcon="#722ED1" data="100€" legend="participants" />
       <CardDetail icon="euro" colorIcon="#FA8C16" data="16 124€" legend="consommé" />
     </ListCardDetail>
-    <CommentBlock></CommentBlock>
+    <CommentBlock />
   </Layout>
 )
 

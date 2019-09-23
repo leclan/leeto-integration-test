@@ -49,13 +49,13 @@ export const breakpoints = {
 
 export const mediaQueries = {
   smallOnly: `@media only screen and (max-width : calc(${breakpoints.medium}px - 1px))`,
-  medium: `@media only screen and (min-width: ${breakpoints.medium})`,
-  mediumOnly: `@media only screen and (max-width : ${breakpoints.large}) and (min-width:${breakpoints.medium})`,
+  medium: `@media only screen and (min-width: ${breakpoints.medium}px)`,
+  mediumOnly: `@media only screen and (max-width : ${breakpoints.large}px) and (min-width:${breakpoints.medium}px)`,
   mediumDown: `@media only screen and (max-width : calc(${breakpoints.large}px - 1px))`,
-  large: `@media only screen and (min-width: ${breakpoints.large})`,
+  large: `@media only screen and (min-width: ${breakpoints.large}px)`,
   largeDown: `@media only screen and (max-width : calc(${breakpoints.xlarge}px - 1px))`,
-  xlarge: `@media only screen and (min-width: ${breakpoints.xlarge})`,
-  xlargeDown: `@media only screen and (max-width : ${breakpoints.xxlarge})`,
-  xlargeOnly: `@media only screen and (max-width : ${breakpoints.xxlarge}) and (min-width:${breakpoints.xlarge})`,
-  xxlarge: `@media only screen and (min-width: ${breakpoints.xxlarge})`,
+  xlarge: `@media only screen and (min-width: ${breakpoints.xlarge}px)`,
+  xlargeDown: `@media only screen and (max-width : calc(${breakpoints.xxlarge}px - 1px))`,
+  xlargeOnly: `@media only screen and (max-width : calc(${breakpoints.xxlarge}px - 1px)) and (min-width:${breakpoints.xlarge}px)`,
+  xxlarge: `@media only screen and (min-width: ${breakpoints.xxlarge}px)`,
 };

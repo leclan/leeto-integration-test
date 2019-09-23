@@ -4,11 +4,14 @@ import Col from '../../components/Grid/Col';
 
 const { Title } = Typography;
 
+type SubventionHeadProps = {
+  title: string
+};
 
-const SubventionHead = () => (
+const SubventionHead = ({ title }: SubventionHeadProps) => (
   <Row type="flex">
     <Col span="auto">
-      <Title level={2}>Subvention Sport</Title>
+      <Title level={2}>{title}</Title>
     </Col>
     <Col span="shrink">
       <Button icon="edit" type="primary">Editer</Button>
