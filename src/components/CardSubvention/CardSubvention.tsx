@@ -7,11 +7,26 @@ import Col from '../../components/Grid/Col';
 
 const { Text } = Typography;
 
-const SuvbentionPicture = styled(Col)`
+const ColPicture = styled(Col)`
+  ${getMediaQuery('smallOnly')} {
+    width: 100%;
+  }
+`
+
+const SuvbentionPicture = styled.div`
   width: ${remCalc(128)};
   height: ${remCalc(128)};
-  margin-right: ${Spaces.medium};
   border-radius: ${globalStyle.radiusSmall};
+
+  ${getMediaQuery('smallOnly')} {
+    margin-right: auto;
+    margin-bottom: ${Spaces.medium};
+    margin-left: auto;
+  }
+
+  ${getMediaQuery('medium')} {
+    margin-right: ${Spaces.medium};
+  }
 `
 
 const SubventionExtras = styled.div`
@@ -44,10 +59,12 @@ type CardSubventionProps = {
 
 const CardSubvention = ({ className, desc, img }: CardSubventionProps) => (
   <Card className={className}>
-    <Row type="flex">
-      <SuvbentionPicture span="shrink">
-        <img src={img} alt="subvention title" />
-      </SuvbentionPicture>
+    <Row type="flex" justify="center">
+      <ColPicture span="shrink">
+        <SuvbentionPicture>
+          <img src={img} alt="subvention title" />
+        </SuvbentionPicture>
+      </ColPicture>
       <Col span="auto">
         <SubventionExtras>
           <Tag color="magenta">subvention</Tag>
