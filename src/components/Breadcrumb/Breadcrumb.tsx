@@ -4,6 +4,7 @@ import { Icon } from 'antd';
 import { colors, transition, Spaces, remCalc } from '../../theme/theme';
 
 const BreadcrumbStyled = styled.div`
+  margin-bottom: ${Spaces.medium};
   color: ${colors.gray400};
 `;
 
